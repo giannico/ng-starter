@@ -1,0 +1,18 @@
+[
+  {
+    "id": "1",
+    "loginId": "faker1",
+    "firstName": "Fake",
+    "lastName": "User",
+    "location": "NJ",
+    "isActive": true
+  },
+  {
+    "id": "2",
+    "loginId": "test",
+    "firstName": "Test",
+    "lastName": "Person",
+    "location": "NY",
+    "isActive": true
+  }
+]

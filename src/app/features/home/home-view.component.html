@@ -1,0 +1,54 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-3">ng-starter template</h1>
+    <p class="lead">A simple angular starter template with the following features: </p>
+
+    <ul>
+        <li>Angular 4</li>
+        <li>Angular CLI 1.0</li>
+        <li>Bootstrap 3</li>
+        <ul>
+          <li>ng2-bootstrap</li>
+          <li>Responsive navbar</li>
+          <li>Tooltips</li>
+          <li>Modals</li>
+        </ul>
+        <li>Environmental config</li>
+        <li>Configurable logging</li>
+        <li>Notifications</li>
+        <li>Lazy route loading</li>
+        <li>Opinionated folder structure</li>
+        <li>Reactive forms example</li>
+        <li>Mock data service</li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="container">
+
+  <h2>Notifications</h2>
+
+  <div class="row">
+
+      <panel #test class="col" type="success">
+        <div title>Success Notifications</div>
+        <div body>
+            <p>This will display a success notification and also log to the console at "log" level.</p>
+            <button class="btn btn-primary"
+              (click)="showSuccessNotification()">Show Success Notification</button>
+        </div>
+      </panel>
+
+      <panel class="col" type="danger">
+          <div title>Success Notifications</div>
+          <div body>
+              <p>This will display an error notification and also log to the console at "error" level.</p>
+            <button class="btn btn-danger"
+              (click)="showErrorNotification()">Show Error Notification</button>
+          </div>
+      </panel>
+
+    </div>
+
+</div>

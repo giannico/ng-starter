@@ -1,0 +1,53 @@
+<form
+  [formGroup]="form" (ngSubmit)="onFormSubmit();">
+
+  <div class="form-group">
+    <label for="firstNameInput">Login ID</label>
+    <input type="text" class="form-control" id="loginIdInput"
+      formControlName="loginId"
+      [readonly]="isExistingUser()">
+  </div>
+
+  <div class="form-group">
+    <label for="firstNameInput">First Name</label>
+    <input type="text" class="form-control" id="firstNameInput"
+      formControlName="firstName">
+  </div>
+
+  <div class="form-group">
+    <label for="lastNameInput">Last Name</label>
+    <input type="text" class="form-control" id="lastNameInput"
+      formControlName="lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="locationSelect">Location</label>
+    <select class="form-control" id="locationSelect"
+      formControlName="location">
+      <option value="">Select location</option>
+      <option *ngFor="let location of locations"
+        [value]="location.value">
+        {{location.description}}
+      </option>
+    </select>
+  </div>
+
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input"
+        formControlName="isActive">
+      Active
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary"
+    [disabled]="form.invalid">
+    <span *ngIf="isExistingUser()">Update</span>
+    <span *ngIf="!isExistingUser()">Create</span>
+  </button>
+
+  <button type="button" class="btn btn-danger"
+    *ngIf="showDelete && isExistingUser()"
+    (click)="onDelete()">Delete</button>
+
+</form>
